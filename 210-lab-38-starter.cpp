@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
     // make it work for strings rather than ints
-
+    
     // Write a program that creates and populates a BST from these records. 
 
     // Add interactive, menu-driven functionality to add, delete, search, and modify records.
