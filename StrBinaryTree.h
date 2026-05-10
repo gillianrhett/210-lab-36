@@ -2,6 +2,7 @@
 #ifndef STRBINARYTREE_H
 #define STRBINARYTREE_H
 #include <string>
+using namespace std;
 // The StrBinaryTree class manages a binary tree of strings.
 class StrBinaryTree {
 private:
@@ -177,7 +178,7 @@ void StrBinaryTree::displayPreOrder(TreeNode *nodePtr) const {
 
 // The displayPostOrder member function displays the values     
 // in the subtree pointed to by nodePtr, via postorder traversal.
-void IntBinaryTree::displayPostOrder(TreeNode *nodePtr) const {
+void StrBinaryTree::displayPostOrder(TreeNode *nodePtr) const {
    if (nodePtr) {
       displayPostOrder(nodePtr->left);    
       displayPostOrder(nodePtr->right);
@@ -185,4 +186,4 @@ void IntBinaryTree::displayPostOrder(TreeNode *nodePtr) const {
    }
 }
 
-#endif // INTBINARYTREE_H
+#endif // STRBINARYTREE_H
