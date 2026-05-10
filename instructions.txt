@@ -1,0 +1,26 @@
+LLM use isn't authorized for this assignment.
+
+Download these project and starter files:
+
+210-lab-38-starter.cppDownload 210-lab-38-starter.cpp
+
+IntBinaryTree.hDownload IntBinaryTree.h
+
+codes.txtDownload codes.txt
+
+ 
+
+This project contains the same dataset we used in Lab 25: codes comprised of letters and digits. It also contains the class definition file for the IntBinaryTree class. 
+
+Modify the class to process the codes found in the codes.txt file, which are strings, rather than integers. 
+
+Write a program that creates and populates a BST from these records. 
+
+Add interactive, menu-driven functionality to add, delete, search, and modify records.
+
+Milestones to document with your commits, in addition to 10-minute commits (commit must read 'Milestone n' where n is the milestone number):
+
+Project is set up and running using the provided files.
+Code modification from int to strings is complete, and your code exercises this for testing.
+Your code successfully creates a BST from the records and outputs it using the method of your choosing. 
+Your code's menu is functional.
