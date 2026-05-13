@@ -31,8 +31,13 @@ int main() {
     }
     
     StrBinaryTree tree;
-    // TODO add the records from the file
-
+    // add the records from the file
+    string tempInput;
+    while(!inFile.eof()) {
+        inFile >> tempInput;
+        tree.insertNode(tempInput);
+    }
+    inFile.close();
 
     // Display the menu
     int choice = 1;
@@ -42,24 +47,43 @@ int main() {
         cout << "2. Delete a record" << endl;
         cout << "3. Search for a record" << endl;
         cout << "4. Modify a record" << endl;
+        cout << "5. Display all records" << endl;
         cout << "0. Quit" << endl;
         cout << "Enter your choice: ";
-        choice = getInt(4);
+        choice = getInt(5);
         if (choice == 1) {
         // add a new record
 
         }
         if (choice == 2) {
         // delete an existing record
-
+            cout << "Enter the code you want to delete: ";
+            cin >> tempInput;
+            cout << "RESULT: ";
+            if(tree.searchNode(tempInput)) {
+                tree.remove(tempInput);
+                cout << tempInput << " was deleted." << endl;
+            }
+            else
+                cout << tempInput << " was not found." << endl;
         }
         if (choice == 3) {
         // search for a record and display whether it was found
-
+            cout << "Enter the code you want to search for: ";
+            cin >> tempInput;
+            cout << "RESULT: ";
+            if(tree.searchNode(tempInput))
+                cout << tempInput << " is in the tree." << endl;
+            else
+                cout << tempInput << " was not found." << endl;
         }
         if (choice == 4) {
         // search for a record and change its string value
 
+        }
+        if (choice == 5) {
+        // display all the records
+            tree.displayInOrder();
         }
         if (choice == 0) {
         // quit
