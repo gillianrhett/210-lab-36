@@ -96,7 +96,10 @@ bool StrBinaryTree::searchNode(string val) {
    while (nodePtr)    {
       if (nodePtr->value == val)
          return true;
-      // TODO finish this
+      else if (val < nodePtr->value)
+         nodePtr = nodePtr->left;
+      else
+         nodePtr = nodePtr->right;
    }
    return false;
 }
@@ -108,16 +111,14 @@ void StrBinaryTree::remove(string val) {
 }
 
 // deleteNode deletes the node whose value 
-// member is the same as num.              
+// member is the same as val.              
 void StrBinaryTree::deleteNode(string val, TreeNode *&nodePtr) {
-   /*if (num < nodePtr->value)
-      deleteNode(num, nodePtr->left);
-   else if (num > nodePtr->value)
-      deleteNode(num, nodePtr->right);
+   if (val < nodePtr->value)
+      deleteNode(val, nodePtr->left);
+   else if (val > nodePtr->value)
+      deleteNode(val, nodePtr->right);
    else
       makeDeletion(nodePtr);
-   */
-   // TODO finish this
 }
 
 
