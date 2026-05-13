@@ -53,7 +53,7 @@ int main() {
         choice = getInt(5);
         if (choice == 1) {
         // add a new record
-
+            tree.insertNode("test");// for testing
         }
         if (choice == 2) {
         // delete an existing record
@@ -79,7 +79,8 @@ int main() {
         }
         if (choice == 4) {
         // search for a record and change its string value
-
+            tree.remove("zzzvpPa2");
+            tree.insertNode("test2");
         }
         if (choice == 5) {
         // display all the records
