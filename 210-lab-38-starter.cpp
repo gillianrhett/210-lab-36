@@ -4,13 +4,6 @@
 #include <string>
 #include "StrBinaryTree.h"
 using namespace std;
-/*Milestones to document with your commits, in addition to 10-minute commits (commit must read 'Milestone n' where n is the milestone number):
-
-DONE 1. Project is set up and running using the provided files.
-2. Code modification from int to strings is complete, and your code exercises this for testing.
-3. Your code successfully creates a BST from the records and outputs it using the method of your choosing. 
-4. Your code's menu is functional.
-*/
 
 const string FILENAME = "codes.txt";
 
@@ -53,7 +46,9 @@ int main() {
         choice = getInt(5);
         if (choice == 1) {
         // add a new record
-            tree.insertNode("test");// for testing
+            cout << "Enter the new code you want to add: ";
+            cin >> tempInput;
+            tree.insertNode(tempInput);
         }
         if (choice == 2) {
         // delete an existing record
@@ -79,8 +74,16 @@ int main() {
         }
         if (choice == 4) {
         // search for a record and change its string value
-            tree.remove("zzzvpPa2");
-            tree.insertNode("test2");
+        // since the tree is sorted, this requires deleting the node and making a new one
+            cout << "Enter the code you want to change: ";
+            cin >> tempInput;
+            if(tree.searchNode(tempInput)) {
+                cout << "Enter the new code: ";
+                cin >> tempInput;
+                tree.insertNode(tempInput);
+            }
+            else
+                cout << tempInput << " was not found." << endl;
         }
         if (choice == 5) {
         // display all the records - Milestone 3; I had put this in already to test the data import
