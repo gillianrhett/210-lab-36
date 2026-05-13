@@ -83,7 +83,7 @@ int main() {
             tree.insertNode("test2");
         }
         if (choice == 5) {
-        // display all the records
+        // display all the records - Milestone 3; I had put this in already to test the data import
             tree.displayInOrder();
         }
         if (choice == 0) {
